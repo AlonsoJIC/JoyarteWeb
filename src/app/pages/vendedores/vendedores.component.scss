@@ -1,0 +1,28 @@
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.btn-warning {
+  background-color: #d97706;
+  border-color: #d97706;
+}
+
+.btn-outline-warning {
+  border-color: #d97706;
+  color: #d97706;
+}
+
+.btn-outline-warning:hover {
+  background-color: #d97706;
+  color: white;
+}
+
+img.rounded-circle {
+  object-fit: cover;
+}
+
+.main {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #f8e9c7, #ffffff);
+}

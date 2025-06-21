@@ -1,0 +1,28 @@
+<div class="main bg-light min-vh-100">
+  <!-- Main -->
+  <main class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold text-dark">Nuestros Productos</h1>
+      <p class="lead text-secondary">Descubre la belleza de la joyería artesanal</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-12 col-md-6 col-lg-4" *ngFor="let producto of productos">
+        <div class="card h-100 shadow-sm border-0">
+          <img [src]="producto.imagen" [alt]="producto.nombre" class="card-img-top object-fit-cover"
+            style="height: 300px;" />
+          <div class="card-body">
+            <h5 class="card-title">{{ producto.nombre }}</h5>
+            <p class="card-text text-muted">Por: {{ producto.vendedor }}</p>
+            <p class="card-text fw-bold text-warning fs-5">{{ producto.precio }}</p>
+          </div>
+          <div class="card-footer bg-transparent border-0">
+            <button class="btn btn-warning w-100">
+              Ver Detalles
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

@@ -1,0 +1,85 @@
+<!-- contacto-page.component.html -->
+<div class="main min-vh-100 py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-4 text-dark fw-bold">Contáctanos</h1>
+      <p class="lead text-muted">Estamos aquí para ayudarte con cualquier consulta</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Contact Form -->
+      <div class="col-lg-8">
+        <div class="card shadow-sm">
+          <div class="card-header bg-white">
+            <h2 class="h5 text-dark">Envíanos un Mensaje</h2>
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="row mb-3">
+                <div class="col-md-6">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input type="text" id="nombre" class="form-control" placeholder="Tu nombre completo">
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">Email</label>
+                  <input type="email" id="email" class="form-control" placeholder="tu@email.com">
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="telefono" class="form-label">Teléfono</label>
+                <input type="text" id="telefono" class="form-control" placeholder="Tu número de teléfono">
+              </div>
+              <div class="mb-3">
+                <label for="asunto" class="form-label">Asunto</label>
+                <input type="text" id="asunto" class="form-control" placeholder="¿En qué podemos ayudarte?">
+              </div>
+              <div class="mb-3">
+                <label for="mensaje" class="form-label">Mensaje</label>
+                <textarea id="mensaje" rows="6" class="form-control"
+                  placeholder="Escribe tu mensaje aquí..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-amber w-100 text-white">Enviar Mensaje</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info + CTA -->
+      <div class="col-lg-4 d-flex flex-column gap-4">
+        <div class="card shadow-sm">
+          <div class="card-header bg-white">
+            <h2 class="h6 text-dark">Información de Contacto</h2>
+          </div>
+          <div class="card-body">
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-envelope text-amber me-2"></i>
+              <span>info.com</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-telephone text-amber me-2"></i>
+              <span>+57 123 456 7890</span>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+              <i class="bi bi-geo-alt text-amber me-2"></i>
+              <span>Bogotá, Colombia</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bi bi-clock text-amber me-2"></i>
+              <span>Lun - Vie: 9:00 - 18:00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-amber text-white shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h2 class="h6">¿Eres Artesano?</h2>
+          </div>
+          <div class="card-body">
+            <p class="mb-3">Únete a nuestra plataforma y comienza a vender tus creaciones únicas.</p>
+            <a class="btn btn-light text-amber w-100" href="/registro">Registrarse como Vendedor</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
