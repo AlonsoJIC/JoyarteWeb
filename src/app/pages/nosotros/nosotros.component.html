@@ -1,12 +1,100 @@
-<main>
-  <div class="main bg-light min-vh-100">
-    <div class="container py-5">
-      <div class="text-center mb-5">
-        <h1 class="display-5 fw-bold text-dark">Nosotros</h1>
-        <p class="lead text-secondary">Conoce más sobre nuestra misión y visión</p>
-      </div>
-
-      <div class="row g-4"></div>
+<div class="homepage min-vh-100 bg-gradient-custom">
+  <!-- Hero Section -->
+  <main class="container py-5">
+    <div class="text-center mb-5">
+      <h1 class="display-4 fw-bold text-dark mb-3">Sobre Nosotros</h1>
+      <p class="lead text-secondary mx-auto" style="max-width: 700px;">
+        Somos una plataforma dedicada a conectar artesanos talentosos con personas que valoran la belleza y calidad de
+        la joyería artesanal hecha a mano.
+      </p>
     </div>
-  </div>
-</main>
+
+    <!-- Misión y Visión -->
+    <div class="row g-4 mb-5">
+      <div class="col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-white d-flex align-items-center">
+            <i class="bi bi-bullseye text-warning me-2"></i>
+            <h5 class="mb-0 fw-bold text-dark">Nuestra Misión</h5>
+          </div>
+          <div class="card-body text-secondary">
+            Empoderar a artesanos y pequeños emprendedores del sector de la joyería y bisutería, brindándoles una
+            plataforma digital que les permita mostrar y vender sus creaciones únicas a un público más amplio,
+            preservando así las tradiciones artesanales y fomentando el comercio justo.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="card shadow-sm">
+          <div class="card-header bg-white d-flex align-items-center">
+            <i class="bi bi-heart-fill text-warning me-2"></i>
+            <h5 class="mb-0 fw-bold text-dark">Nuestra Visión</h5>
+          </div>
+          <div class="card-body text-secondary">
+            Ser la plataforma líder en América Latina para la comercialización de joyería y bisutería artesanal,
+            reconocida por promover el talento local, la sostenibilidad y la conexión auténtica entre creadores y
+            consumidores conscientes.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Historia -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-12">
+        <h2 class="fw-bold text-dark mb-3">Nuestra Historia</h2>
+        <p class="text-secondary">JOYARTE nació en 2023 de la pasión por el arte...</p>
+        <p class="text-secondary">Fundada por un equipo de emprendedores...</p>
+        <p class="text-secondary">Cada pieza que se vende en nuestra plataforma...</p>
+      </div>
+    </div>
+
+    <!-- Valores -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-dark mb-4">Nuestros Valores</h2>
+      <div class="row g-4">
+        <div class="col-md-3" *ngFor="let valor of valores">
+          <div class="card h-100 text-center shadow-sm hover-shadow">
+            <div class="card-body">
+              <div
+                class="bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px;">
+                <i [class]="valor.icono + ' text-warning fs-4'"></i>
+              </div>
+              <h5 class="fw-semibold text-dark">{{ valor.titulo }}</h5>
+              <p class="text-muted small">{{ valor.descripcion }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Equipo -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold text-dark mb-4">Nuestro Equipo</h2>
+      <div class="row g-4">
+        <div class="col-md-4" *ngFor="let miembro of equipo">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <img [src]="miembro.img" class="rounded-circle mb-3" width="100" height="100" />
+              <h5 class="fw-semibold text-dark">{{ miembro.nombre }}</h5>
+              <p class="text-warning mb-2">{{ miembro.rol }}</p>
+              <p class="text-muted small">{{ miembro.desc }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Estadísticas -->
+    <div class="bg-warning text-white text-center rounded p-4 mb-5">
+      <h2 class="fw-bold mb-4">JOYARTE en Números</h2>
+      <div class="row">
+        <div class="col-6 col-md-3" *ngFor="let stat of estadisticas">
+          <div class="fs-2 fw-bold">{{ stat.valor }}</div>
+          <div class="text-white-50">{{ stat.descripcion }}</div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
