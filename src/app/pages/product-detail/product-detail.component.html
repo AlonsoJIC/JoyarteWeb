@@ -1,0 +1,31 @@
+<div class="main">
+  <section class="product-detail-section">
+    <div *ngIf="!producto" class="container text-center py-5">
+      <div class="spinner-border text-warning" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="lead mt-3">Cargando producto...</p>
+    </div>
+    <div *ngIf="producto" class="container py-5">
+      <div class="row g-5">
+        <div class="col-lg-6">
+          <img [src]="producto.imagen" [alt]="producto.nombre" class="img-fluid rounded shadow-lg">
+        </div>
+        <div class="col-lg-6 d-flex flex-column">
+          <h6 class="text-secondary fw-light mb-2">Vendido por: <span class="badge bg-secondary">{{ producto.tienda
+              }}</span></h6>
+          <h1 class="display-5 fw-bold mb-3">{{ producto.nombre }}</h1>
+          <p class="fs-1 fw-bolder text-warning my-3">{{ producto.precio }}</p>
+          <hr class="my-4">
+          <p class="fs-5">{{ producto.descripcion }}</p>
+          <div class="mt-auto pt-4">
+            <button class="btn btn-success btn-lg me-2">
+              <i class="bi bi-cart-plus-fill"></i> Añadir al carrito
+            </button>
+            <a routerLink="/productos" class="btn btn-outline-secondary btn-lg">Volver a la lista</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

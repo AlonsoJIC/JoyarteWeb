@@ -1,5 +1,4 @@
-<div class="homepage min-vh-100 bg-gradient-custom">
-  <!-- Hero Section -->
+<div class="homepage">
   <main class="container py-5">
     <div class="text-center mb-5">
       <h1 class="display-4 fw-bold text-dark mb-3">Sobre Nosotros</h1>
@@ -12,9 +11,9 @@
     <!-- Misión y Visión -->
     <div class="row g-4 mb-5">
       <div class="col-lg-6">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm h-100">
           <div class="card-header bg-white d-flex align-items-center">
-            <i class="bi bi-bullseye text-warning me-2"></i>
+            <i class="bi bi-bullseye text-warning me-2 fs-4"></i>
             <h5 class="mb-0 fw-bold text-dark">Nuestra Misión</h5>
           </div>
           <div class="card-body text-secondary">
@@ -25,9 +24,9 @@
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="card shadow-sm">
+        <div class="card shadow-sm h-100">
           <div class="card-header bg-white d-flex align-items-center">
-            <i class="bi bi-heart-fill text-warning me-2"></i>
+            <i class="bi bi-heart-fill text-warning me-2 fs-4"></i>
             <h5 class="mb-0 fw-bold text-dark">Nuestra Visión</h5>
           </div>
           <div class="card-body text-secondary">
@@ -41,11 +40,20 @@
 
     <!-- Historia -->
     <div class="row align-items-center mb-5">
-      <div class="col-lg-12">
+      <div class="col-lg-6">
         <h2 class="fw-bold text-dark mb-3">Nuestra Historia</h2>
-        <p class="text-secondary">JOYARTE nació en 2023 de la pasión por el arte...</p>
-        <p class="text-secondary">Fundada por un equipo de emprendedores...</p>
-        <p class="text-secondary">Cada pieza que se vende en nuestra plataforma...</p>
+        <p class="text-secondary">JOYARTE nació en 2023 de la pasión por el arte, la cultura y las historias que cada
+          pieza de joyería artesanal puede contar. Vimos un universo de talento en manos de artesanos locales que
+          merecía ser descubierto por el mundo.</p>
+        <p class="text-secondary">Fundada por un equipo de emprendedores con experiencia en tecnología y amor por el
+          diseño, nuestra plataforma fue creada como un puente para unir la tradición con las posibilidades del mundo
+          digital.</p>
+        <p class="text-secondary">Cada pieza que se vende en nuestra plataforma no es solo un accesorio, es un fragmento
+          de la historia de su creador, un compromiso con la calidad y una celebración de la autenticidad.</p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?q=80&w=1953&auto=format&fit=crop"
+          alt="Colección de joyería artesanal" class="img-fluid rounded-3 shadow-lg">
       </div>
     </div>
 
@@ -53,16 +61,59 @@
     <div class="text-center mb-5">
       <h2 class="fw-bold text-dark mb-4">Nuestros Valores</h2>
       <div class="row g-4">
-        <div class="col-md-3" *ngFor="let valor of valores">
+        <!-- Valor 1 -->
+        <div class="col-md-6 col-lg-3">
           <div class="card h-100 text-center shadow-sm hover-shadow">
             <div class="card-body">
               <div
                 class="bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
                 style="width: 64px; height: 64px;">
-                <i [class]="valor.icono + ' text-warning fs-4'"></i>
+                <i class="bi bi-stars text-warning fs-4"></i>
               </div>
-              <h5 class="fw-semibold text-dark">{{ valor.titulo }}</h5>
-              <p class="text-muted small">{{ valor.descripcion }}</p>
+              <h5 class="fw-semibold text-dark">Calidad Artesanal</h5>
+              <p class="text-muted small">Celebramos la maestría y el detalle en cada creación.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Valor 2 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm hover-shadow">
+            <div class="card-body">
+              <div
+                class="bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px;">
+                <i class="bi bi-arrow-through-heart-fill text-warning fs-4"></i>
+              </div>
+              <h5 class="fw-semibold text-dark">Comercio Justo</h5>
+              <p class="text-muted small">Garantizamos una retribución justa para nuestros artesanos.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Valor 3 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm hover-shadow">
+            <div class="card-body">
+              <div
+                class="bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px;">
+                <i class="bi bi-recycle text-warning fs-4"></i>
+              </div>
+              <h5 class="fw-semibold text-dark">Sostenibilidad</h5>
+              <p class="text-muted small">Promovemos prácticas y materiales respetuosos con el planeta.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Valor 4 -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center shadow-sm hover-shadow">
+            <div class="card-body">
+              <div
+                class="bg-warning bg-opacity-25 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3"
+                style="width: 64px; height: 64px;">
+                <i class="bi bi-patch-check-fill text-warning fs-4"></i>
+              </div>
+              <h5 class="fw-semibold text-dark">Autenticidad</h5>
+              <p class="text-muted small">Cada pieza es única y cuenta una historia verdadera.</p>
             </div>
           </div>
         </div>
@@ -72,14 +123,52 @@
     <!-- Equipo -->
     <div class="text-center mb-5">
       <h2 class="fw-bold text-dark mb-4">Nuestro Equipo</h2>
-      <div class="row g-4">
-        <div class="col-md-4" *ngFor="let miembro of equipo">
+      <div class="row g-4 justify-content-center">
+        <!-- Miembro 1 -->
+        <div class="col-md-4">
           <div class="card h-100 text-center shadow-sm">
             <div class="card-body">
-              <img [src]="miembro.img" class="rounded-circle mb-3" width="100" height="100" />
-              <h5 class="fw-semibold text-dark">{{ miembro.nombre }}</h5>
-              <p class="text-warning mb-2">{{ miembro.rol }}</p>
-              <p class="text-muted small">{{ miembro.desc }}</p>
+              <img src="https://placehold.co/100x100/f8e9c7/44403C?text=JG" class="rounded-circle mb-3"
+                alt="Foto de Jose Ignacio Alpizar Granados" />
+              <h5 class="fw-semibold text-dark">Jose Ignacio Alpizar Granados</h5>
+              <p class="text-warning mb-2 fw-bold">Fundadora & CEO</p>
+              <p class="text-muted small">Apasionada por el diseño y el empoderamiento de comunidades creativas.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 2 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <img src="https://placehold.co/100x100/f8e9c7/44403C?text=FA" class="rounded-circle mb-3"
+                alt="Foto de Fabian Andres Araya Salas" />
+              <h5 class="fw-semibold text-dark">Fabian Andres Araya Salas</h5>
+              <p class="text-warning mb-2 fw-bold">Director de Tecnología</p>
+              <p class="text-muted small">El arquitecto detrás de nuestra plataforma, conectando arte y tecnología.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 3 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <img src="https://placehold.co/100x100/f8e9c7/44403C?text=DG" class="rounded-circle mb-3"
+                alt="Foto de Davidson Emanuel Gonzalez Salas" />
+              <h5 class="fw-semibold text-dark">Davidson Emanuel Gonzalez Salas</h5>
+              <p class="text-warning mb-2 fw-bold">Jefa de Comunidad</p>
+              <p class="text-muted small">El corazón de nuestra relación con los artesanos, asegurando su éxito.</p>
+            </div>
+          </div>
+        </div>
+        <!-- Miembro 4 -->
+        <div class="col-md-4">
+          <div class="card h-100 text-center shadow-sm">
+            <div class="card-body">
+              <img src="https://placehold.co/100x100/f8e9c7/44403C?text=JJ" class="rounded-circle mb-3"
+                alt="Foto de Jesus Alonso Jimenez Cucanan" />
+              <h5 class="fw-semibold text-dark">Jesus Alonso Jimenez Cucanan</h5>
+              <p class="text-warning mb-2 fw-bold">Programador</p>
+              <p class="text-muted small">Las manos que hacen posible nuestra plataforma.</p>
             </div>
           </div>
         </div>
@@ -87,12 +176,22 @@
     </div>
 
     <!-- Estadísticas -->
-    <div class="bg-warning text-white text-center rounded p-4 mb-5">
+    <div class="bg-dark text-white text-center rounded p-4 mb-5 shadow-lg">
       <h2 class="fw-bold mb-4">JOYARTE en Números</h2>
+      <p class="fs-2">Cada dia creciendo de la mano de nuestros artesanos.</p>
+      <br>
       <div class="row">
-        <div class="col-6 col-md-3" *ngFor="let stat of estadisticas">
-          <div class="fs-2 fw-bold">{{ stat.valor }}</div>
-          <div class="text-white-50">{{ stat.descripcion }}</div>
+        <div class="col-6 col-md-4">
+          <div class="fs-2 fw-bold">+15</div>
+          <div class="text-white-50">Artesanos</div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="fs-2 fw-bold">+50</div>
+          <div class="text-white-50">Piezas Únicas</div>
+        </div>
+        <div class="col-6 col-md-4">
+          <div class="fs-2 fw-bold">100%</div>
+          <div class="text-white-50">Hecho a Mano</div>
         </div>
       </div>
     </div>
